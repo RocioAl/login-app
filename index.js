@@ -3,11 +3,6 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 5000;
-app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
 
 app.use(cors())
 
@@ -63,6 +58,6 @@ function verifyToken(req, res, next) {
     }
 }
 
-// app.listen(3000, () => {
-//     console.log("nodejs app running...");
-// });
+app.listen(3000, () => {
+    console.log("nodejs app running...");
+});
